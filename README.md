@@ -1,11 +1,12 @@
 # st - simple terminal
 
-st is a simple terminal emulator for X which sucks less.
+`st` is a simple terminal emulator for X which sucks less.
 
 ## Changes
 
 The following section describes the various changes I have added to the st
-codebase.
+codebase. The suckless documentation, FAQ, legacy notice, and license for `st`
+can be found in the `suckless` directory.
 
 ### Build Changes
 
@@ -31,14 +32,11 @@ of the scrollback feature.
 { MODKEY,               XK_Down,        kscrolldown,    {.i = -1} },
 { MODKEY,               XK_j,           kscrollup,      {.i = -1} },
 { MODKEY,               XK_k,           kscrolldown,    {.i = -1} },
-{ MODKEY,               XK_J,           kscrollup,      {.i = -40} },
-{ MODKEY,               XK_K,           kscrolldown,    {.i = -40} },
 ```
 
 `MODKEY` and the up and down arrows can be used to move the scrollback up or
 down. To provide a vim-ish experience, `MODKEY` and lowercase `j` move the
-scrollback up. `MODKEY` and lowercase `k` move the scrollback down. Captial `J`
-and `K` move the scrollback 40 rows in their respective direction.
+scrollback up. `MODKEY` and lowercase `k` move the scrollback down.
 
 The following block of code was added by the patch to allow the mouse to
 perform scrollback.
@@ -47,31 +45,3 @@ perform scrollback.
 { ShiftMask,            Button4, kscrollup,      {.i = 1} },
 { ShiftMask,            Button5, kscrolldown,    {.i = 1} },
 ```
-
-## Requirements
-
-In order to build st you need the Xlib header files.
-
-## Installation
-
-Edit config.mk to match your local setup (st is installed into
-the /usr/local namespace by default).
-
-Afterwards enter the following command to build and install st (if
-necessary as root):
-
-    make clean install
-
-## Running st
-
-If you did not install st with make clean install, you must compile
-the st terminfo entry with the following command:
-
-    tic -sx st.info
-
-See the man page for additional details.
-
-## Credits
-
-Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
-
