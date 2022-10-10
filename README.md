@@ -13,6 +13,18 @@ can be found in the `suckless` directory.
 The config.mk file has had the `PREFIX` variable changed from `/usr/local/` to
 `~/.local/`. This allows the st tool to only be installed for my user.
 
+## config.h changes
+
+The following section describes no patch related changes made to the `config.h`
+header file.
+
+### Font
+
+The terminal font has been modified to the following:
+```c
+static char *font = "Source Code Pro:pixelsize=14:antialias=true:autohint=true";
+```
+
 ## Patches
 
 The following section describes applied patches and any further modifications
