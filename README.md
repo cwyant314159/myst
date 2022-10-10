@@ -24,14 +24,14 @@ These are the patches applied for scrollback support:
 - st-scrollback-20210507-4536f46.diff
 - st-scrollback-mouse-20220127-2c5edf2.diff
 
-The following block of code was added to the shortcuts array to allow the use
-of the scrollback feature.
+The following block of code was added to the shortcuts array (`shortcuts[]`) to
+allow the use of the scrollback feature.
 
 ```c
-{ MODKEY,               XK_Up,          kscrollup,      {.i = -1} },
-{ MODKEY,               XK_Down,        kscrolldown,    {.i = -1} },
-{ MODKEY,               XK_j,           kscrollup,      {.i = -1} },
-{ MODKEY,               XK_k,           kscrolldown,    {.i = -1} },
+{ MODKEY, XK_Up,   kscrollup,   {.i = -1} },
+{ MODKEY, XK_Down, kscrolldown, {.i = -1} },
+{ MODKEY, XK_j,    kscrollup,   {.i = -1} },
+{ MODKEY, XK_k,    kscrolldown, {.i = -1} },
 ```
 
 `MODKEY` and the up and down arrows can be used to move the scrollback up or
@@ -42,6 +42,6 @@ The following block of code was added by the patch to allow the mouse to
 perform scrollback.
 
 ```c
-{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
-{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+{ ShiftMask, Button4, kscrollup,   {.i = 1} },
+{ ShiftMask, Button5, kscrolldown, {.i = 1} },
 ```
