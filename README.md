@@ -4,9 +4,10 @@ st is a simple terminal emulator for X which sucks less.
 
 ## Changes
 
-The following section describes the various changes I have added to the st codebase.
+The following section describes the various changes I have added to the st
+codebase.
 
-### Build Cst-scrollback-20210507-4536f46.diffhanges
+### Build Changes
 
 The config.mk file has had the `PREFIX` variable changed from `/usr/local/` to
 `~/.local/`. This allows the st tool to only be installed for my user.
