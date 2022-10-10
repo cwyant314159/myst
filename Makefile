@@ -30,7 +30,8 @@ st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
 
 clean:
-	rm -f st $(OBJ) st-$(VERSION).tar.gz
+	rm -f st
+	rm -f $(OBJ)
 
 install: st
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
