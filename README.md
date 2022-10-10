@@ -40,6 +40,14 @@ down. To provide a vim-ish experience, `MODKEY` and lowercase `j` move the
 scrollback up. `MODKEY` and lowercase `k` move the scrollback down. Captial `J`
 and `K` move the scrollback 40 rows in their respective direction.
 
+The following block of code was added by the patch to allow the mouse to
+perform scrollback.
+
+```c
+{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
+{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+```
+
 ## Requirements
 
 In order to build st you need the Xlib header files.
