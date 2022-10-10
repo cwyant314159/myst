@@ -28,10 +28,10 @@ The following block of code was added to the shortcuts array (`shortcuts[]`) to
 allow the use of the scrollback feature.
 
 ```c
-{ MODKEY, XK_Up,   kscrollup,   {.i = -1} },
-{ MODKEY, XK_Down, kscrolldown, {.i = -1} },
-{ MODKEY, XK_j,    kscrollup,   {.i = -1} },
-{ MODKEY, XK_k,    kscrolldown, {.i = -1} },
+{ MODKEY, XK_Up,   kscrollup,   {.i = 1} },
+{ MODKEY, XK_Down, kscrolldown, {.i = 1} },
+{ MODKEY, XK_j,    kscrollup,   {.i = 1} },
+{ MODKEY, XK_k,    kscrolldown, {.i = 1} },
 ```
 
 `MODKEY` and the up and down arrows can be used to move the scrollback up or
