@@ -4,16 +4,16 @@
 
 ## Changes
 
-The following section describes the various changes I have added to the st
+The following sections describe the various changes I have added to the st
 codebase. The suckless documentation, FAQ, legacy notice, and license for `st`
 can be found in the `suckless` directory.
 
-### Build Changes
+## Build Changes
 
 The config.mk file has had the `PREFIX` variable changed from `/usr/local/` to
 `~/.local/`. This allows the st tool to only be installed for my user.
 
-### Patches
+## Patches
 
 The following section describes applied patches and any further modifications
 using those patches.
