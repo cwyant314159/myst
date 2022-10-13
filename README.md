@@ -35,6 +35,14 @@ or'ing of the `ShiftMask` and `MODKEY` constants.
 #define SHIFTMOD (ShiftMask|MODKEY)
 ```
 
+### Shortcuts
+
+The shortcuts for `clipcopy` and `clippaste` have been modified as follows:
+```c
+{ ControlMask, XK_y, clipcopy,  {.i =  0} },
+{ ControlMask, XK_p, clippaste, {.i =  0} },
+```
+
 ## Patches
 
 The following section describes applied patches and any further modifications
